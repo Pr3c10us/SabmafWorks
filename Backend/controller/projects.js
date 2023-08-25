@@ -46,7 +46,7 @@ const createProject = async (req, res) => {
 
 const getProjects = async (req, res) => {
     // get name query from request
-    const { name, services } = req.query;
+    const { name, services, displayAtHome } = req.query;
 
     // create a query object to filter result and for search attribute add admin to it
     const queryObject = {};
@@ -59,11 +59,14 @@ const getProjects = async (req, res) => {
     if (services) {
         queryObject.services = services;
     }
+    if (displayAtHome) {
+        queryObject.displayAtHome = displayAtHome;
+    }
 
     // get projects for admin
-    let result = Project.find(queryObject).select(
-        "-admin -createdAt -updatedAt -__v"
-    );
+    let result = Project.find(queryObject)
+        .sort("createdAt")
+        .select("-admin -createdAt -updatedAt -__v");
 
     // #################################################################
     // Set up Pagination

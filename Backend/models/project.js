@@ -9,6 +9,13 @@ const projectSchema = new mongoose.Schema(
         description: {
             type: String,
         },
+        displayAtHome: {
+            type: Boolean,
+            default: false,
+        },
+        displayImages: {
+            type: String,
+        },
         images: [
             {
                 type: String,

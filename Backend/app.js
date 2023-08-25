@@ -65,6 +65,10 @@ app.use("/api/auth", authenticationRoutes);
 const projectRoutes = require("./routes/projects");
 app.use("/api/projects", projectRoutes);
 
+// PRODUCT ROUTES
+const mailRoutes = require("./routes/mail");
+app.use("/api/mail", mailRoutes);
+
 // ######################################################################################################
 // ######################################################################################################
 // Handler Middleware
