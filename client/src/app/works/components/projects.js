@@ -4,7 +4,7 @@ import Project from "./project";
 
 const Projects = ({ works }) => {
   return (
-    <section className="z-10 flex h-full w-full flex-col gap-y-8 md:gap-y-16 items-center">
+    <section className="z-10 grid h-full w-full flex-col place-items-center items-center gap-8 md:gap-16 xl:grid-cols-2">
       {works.map((work, i) => (
         <Project work={work} key={work._id} />
       ))}

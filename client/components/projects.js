@@ -17,7 +17,7 @@ const Projects = ({ projects, setCursorType }) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-[6vw] uppercase text-text md:text-5xl "
+          className="text-[6vw] font-semibold uppercase text-text md:text-5xl"
         >
           <VowelItalicizer text={"Our Works"} />
         </motion.h1>

@@ -3,8 +3,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import VowelItalicizer from "./vowelItalicizer";
+import { useRouter } from "next/navigation";
 
 const Services = ({ setCursorType, setImage }) => {
+  const router = useRouter();
   const divVariant = {
     initial: { y: "100px", opacity: 0 },
     animate: { y: "0px", opacity: 1 },
@@ -45,7 +47,7 @@ const Services = ({ setCursorType, setImage }) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-[6vw] uppercase text-text md:text-5xl "
+          className="text-[6vw] uppercase text-text md:text-5xl font-semibold"
         >
           <VowelItalicizer text={"Our Services"} />
         </motion.h1>
@@ -54,6 +56,7 @@ const Services = ({ setCursorType, setImage }) => {
       <div className="grid md:grid-cols-2 gap-4 transition-all duration-100 md:grid-cols-">
         {services.map((service, index) => (
           <div
+          onClick={()=>router.push(`/works?service=${service.name}&path=works`)}
             key={service.name}
             className={` ${
               (index == 0 || index == 3) &&

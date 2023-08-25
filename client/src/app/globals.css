@@ -9,11 +9,13 @@
 
 ::-webkit-scrollbar {
     width: 0.7rem;
-    height: 0.5rem;
+    height: 0.7rem;
+    
   }
 ::-webkit-scrollbar-thumb {
     background-color: #878787;
     border-radius: 0; 
+    cursor: pointer;
 
   }
 ::-webkit-scrollbar-track {

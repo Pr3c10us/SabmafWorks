@@ -49,14 +49,17 @@ const Contact = ({ setCursorType }) => {
     }),
   });
   return (
-    <section id="contact" className="relative z-10 flex snap-end flex-col items-center gap-[10vh] bg-white px-6 py-28 md:gap-16  md:px-14 ">
+    <section
+      id="contact"
+      className="relative z-10 flex snap-end flex-col items-center gap-[10vh] bg-white px-6 py-28 md:gap-16  md:px-14 "
+    >
       <div className="flex w-full items-center gap-4 ">
         <motion.h1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-[6vw] uppercase  text-text md:text-5xl "
+          className="text-[6vw] font-semibold  uppercase text-text md:text-5xl"
         >
           <VowelItalicizer text={"Contact us"} />
         </motion.h1>

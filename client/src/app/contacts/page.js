@@ -53,7 +53,7 @@ const Contact = () => {
     }),
   });
   return (
-    <main className="relative flex h-full flex-col justify-between bg-white">
+    <main className="relative flex min-h-screen flex-col justify-between bg-white">
       {" "}
       <Cursor cursorType={cursorType} />
       <section
@@ -196,9 +196,9 @@ const Contact = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 1 }}
-                className="text-[6vw] capitalize  text-text md:text-5xl "
+                className="text-[6vw] capitalize text-text md:text-5xl "
               >
-               <VowelItalicizer text={"Our Contact"} />
+               <VowelItalicizer text={" Our Contact"} />
               </h1>
               {/* <div className="h-[1px] flex-1 bg-primary"></div> */}
             </div>{" "}

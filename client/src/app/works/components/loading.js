@@ -2,8 +2,8 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <section className="z-10 flex h-full w-full flex-col items-center gap-y-8 md:gap-y-16">
-      <div className="flex w-full max-w-4xl border animate-pulse flex-col">
+    <section className="z-10 grid h-full w-full flex-col place-items-center items-center gap-8 md:gap-16 xl:grid-cols-2">
+      <div className="flex w-full max-w-4xl animate-pulse flex-col border">
         <div
           className={`aspect-video w-full bg-gray-100 object-cover object-center `}
         />
@@ -12,7 +12,7 @@ const Loading = () => {
           <button className="flex h-4 w-20 items-center justify-center gap-x-1 bg-white px-1 text-xs md:h-6 md:w-32 md:gap-x-2 md:text-base"></button>
         </div>
       </div>
-      <div className="flex w-full max-w-4xl border animate-pulse flex-col">
+      <div className="flex w-full max-w-4xl animate-pulse flex-col border">
         <div
           className={`aspect-video w-full bg-gray-100 object-cover object-center `}
         />
@@ -21,7 +21,7 @@ const Loading = () => {
           <button className="flex h-4 w-20 items-center justify-center gap-x-1 bg-white px-1 text-xs md:h-6 md:w-32 md:gap-x-2 md:text-base"></button>
         </div>
       </div>
-      <div className="flex w-full max-w-4xl border animate-pulse flex-col">
+      <div className="flex w-full max-w-4xl animate-pulse flex-col border">
         <div
           className={`aspect-video w-full bg-gray-100 object-cover object-center `}
         />
@@ -30,7 +30,6 @@ const Loading = () => {
           <button className="flex h-4 w-20 items-center justify-center gap-x-1 bg-white px-1 text-xs md:h-6 md:w-32 md:gap-x-2 md:text-base"></button>
         </div>
       </div>
-     
     </section>
   );
 };
