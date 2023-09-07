@@ -55,7 +55,7 @@ const Navbar = () => {
           />
           <h2
             className={`text-2xl font-bold transition-all duration-300 md:text-base md:font-semibold ${
-              openMenu ? "text-white" : "text-black"
+              openMenu ? "text-white md:text-black" : "text-black"
             }`}
           >
             <span className="text-primary">Sab</span>Mafworks

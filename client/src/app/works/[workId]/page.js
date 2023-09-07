@@ -7,6 +7,7 @@ import Image from "next/image";
 import BottomNav from "../../../../components/bottomNav";
 import Carousel from "./components/carousel";
 import FullImage from "./components/fullImage";
+import Others from "./components/others";
 
 const Page = () => {
   const pathname = usePathname();
@@ -38,11 +39,11 @@ const Page = () => {
 
   if (isLoading) return <Loading />;
   return (
-    <main className="flex min-h-full  flex-col justify-between bg-white">
+    <main className="flex min-h-full  flex-col justify-between bg-white gap-4">
       {" "}
       <section
         id="contact"
-        className="relative z-10 flex  snap-end flex-col items-center gap-8 bg-white px-4 py-16 md:gap-16 md:px-14  md:py-32 "
+        className="relative z-10 flex  snap-end flex-col items-center gap-8 bg-white px-4 py-24 md:gap-16 md:px-14  md:py-32 "
       >
         <div className="flex w-full max-w-xl flex-col justify-center gap-8 text-center">
           <h1 className="text-2xl font-semibold uppercase text-text underline md:text-4xl">
@@ -77,7 +78,8 @@ const Page = () => {
           currImage={currImage}
         />
       )}
-      <BottomNav />
+      <Others id={work._id} />
+      <BottomNav  />
     </main>
   );
 };
