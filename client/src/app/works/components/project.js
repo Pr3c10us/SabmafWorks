@@ -30,6 +30,7 @@ const Project = ({ work, index, cols }) => {
         width={6000}
         height={6000}
         className={`h-full scale-125 object-cover object-center transition-all duration-200 group-hover:scale-[1.20] group-hover:brightness-75`}
+        priority
       />
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-200 group-hover:opacity-100">
         <h2 className="flex items-center gap-x-1 text-3xl font-semibold text-white md:gap-x-2 lg:gap-x-1 ">
