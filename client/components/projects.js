@@ -33,7 +33,7 @@ const Projects = ({ projects, setCursorType }) => {
             alt={project.name}
             width="6000"
             height="6000"
-            className={`aspect-video h-full object-cover object-center  `}
+            className={`md:aspect-video h-96 md:h-full object-cover object-center  `}
             priority
           />
         ))}

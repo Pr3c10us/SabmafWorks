@@ -39,7 +39,7 @@ const Carousel = ({
       onMouseLeave={() => {
         setCursorType(null);
       }}
-      className="relative mx-2 flex aspect-video h-full  overflow-hidden shadow-xl md:mx-4 lg:mx-[15%]"
+      className="relative mx-0 flex md:aspect-video h-96 md:h-full  overflow-hidden shadow-xl md:mx-4 lg:mx-[15%]"
     >
       <div
         className={`flex transition-all duration-500 ease-out`}
