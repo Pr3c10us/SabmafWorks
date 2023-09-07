@@ -28,7 +28,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        // style={{ translateY: y }}
+        style={{ translateY: y }}
         className=" text-[10vw] font-semibold text-black lg:text-8xl"
       >
         <span className="text-[#B56748] ">Sab</span>

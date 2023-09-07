@@ -62,10 +62,11 @@ const Works = () => {
         id="contact"
         className="relative z-10 flex  snap-end flex-col items-center gap-8 bg-white px-4 py-16 md:gap-16 md:px-14  md:py-32 "
       >
-        <div className="flex w-full">
+        <div className="flex w-full items-center gap-2">
           <h1 className="text-4xl uppercase text-text md:text-5xl ">
             <VowelItalicizer text={"Our Works"} />
           </h1>
+          <div className="h-[1px] flex-1 bg-primary"></div>
         </div>
         <Filter service={service} setService={setService} />
         {/* <Projects works={works} /> */}
@@ -78,7 +79,7 @@ const Works = () => {
             {isLoading ? (
               <Loading />
             ) : (
-              <h1 className="text-2xl text-text max-w-xl text-center">
+              <h1 className="max-w-xl text-center text-2xl text-text">
                 We currently have no projects to display, of our service "
                 {service}". Please check back
               </h1>

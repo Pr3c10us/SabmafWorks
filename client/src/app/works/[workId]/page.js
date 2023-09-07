@@ -45,10 +45,10 @@ const Page = () => {
         className="relative z-10 flex  snap-end flex-col items-center gap-8 bg-white px-4 py-16 md:gap-16 md:px-14  md:py-32 "
       >
         <div className="flex w-full max-w-xl flex-col justify-center gap-8 text-center">
-          <h1 className="text-3xl font-semibold uppercase text-text underline md:text-5xl">
+          <h1 className="text-2xl font-semibold uppercase text-text underline md:text-4xl">
             {work.name}
           </h1>
-          <p className="text-sm sm:text-base">{work.description}</p>
+          <p className=" sm:text-lg">{work.description}</p>
         </div>
 
         <Carousel autoSlide={false}>

@@ -17,6 +17,7 @@ export default function Home() {
   const [projects, setProjects] = useState([]);
 
   const handleEffect = async () => {
+    
     setLoading(true);
     try {
       const { data } = await axios.get(

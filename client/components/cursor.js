@@ -28,7 +28,7 @@ const Cursor = ({ cursorType, image }) => {
   return (
     <div
       className={`pointer-events-none fixed bottom-0 right-0 z-[60] hidden -translate-x-1/2  -translate-y-1/2 items-center justify-center rounded-full border-2 border-accent transition-all duration-150 sm:flex  ${
-        cursorType == "link" && " h-20 w-20 border-4 "
+        cursorType == "link" && " h-20 w-20 border-none "
       }
       ${cursorType == "project" && " h-24 w-24 border-none  border-white"}  
       ${cursorType == "fill" && " h-6 w-6 border-none bg-accent"} 

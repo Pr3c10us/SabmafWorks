@@ -25,6 +25,9 @@ const Projects = ({ projects, setCursorType }) => {
       <Carousel setCursorType={setCursorType} autoSlide={true}>
         {projects.map((project, i) => (
           <Image
+            onClick={() => {
+              router.push(`/works/${project._id}`);
+            }}
             key={project._id}
             src={`${process.env.NEXT_PUBLIC_IMAGE_URL_PREFIX}${project.displayImages}`}
             alt={project.name}
