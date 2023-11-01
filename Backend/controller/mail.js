@@ -10,7 +10,7 @@ const contactFormMail = async (req, res) => {
 
     const emailMessage = {
         senderAddress:
-            "SabMafworks@a2192ef3-e315-4ee2-9d82-4b9f941aa41d.azurecomm.net",
+            "Sabmaf@55293b42-5385-4568-8de7-297f8811f200.azurecomm.net",
         content: {
             subject: "New Contact Form Submission",
             html: contactMail(fullName, company, email, message),

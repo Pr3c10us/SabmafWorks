@@ -272,7 +272,7 @@ const updateProject = async (req, res) => {
             name: req.body.name,
         });
 
-        if (nameExist) {
+        if (nameExist?._id?.toString() !== id && nameExist) {
             throw new BadRequestError("Name already exists");
         }
     }

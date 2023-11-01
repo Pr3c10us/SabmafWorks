@@ -29,7 +29,7 @@ const Projects = ({ projects, setCursorType }) => {
               router.push(`/works/${project._id}`);
             }}
             key={project._id}
-            src={`${process.env.NEXT_PUBLIC_IMAGE_URL_PREFIX}${project.displayImages}`}
+            src={`${process.env.NEXT_PUBLIC_IMAGE_URL_PREFIX}${project.images[0]}`}
             alt={project.name}
             width="6000"
             height="6000"

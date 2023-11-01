@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "sabmaf.blob.core.windows.net",
+        hostname: "sabmaf2.blob.core.windows.net",
         port: "",
         pathname: "/sabmafimages/**",
       },

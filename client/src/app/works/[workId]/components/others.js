@@ -10,7 +10,7 @@ const Others = ({ id }) => {
   const [works, setworks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const fetchWorks = async () => {
     setIsLoading(true);
@@ -31,7 +31,7 @@ const Others = ({ id }) => {
 
   if (isLoading) <Loading />;
   return (
-    <section>
+    <section className={`${works.length <= 1 ? "hidden" : "block"}`}>
       <div className="mb-6 flex w-full items-center gap-2 pl-4">
         <h1 className="text-xl uppercase text-text md:text-5xl ">
           <VowelItalicizer text={"Other Works"} />
@@ -43,14 +43,12 @@ const Others = ({ id }) => {
           if (i <= 5 && work._id != id) {
             return (
               <div
-              key={work._id}
+                key={work._id}
                 onClick={() => router.push(`/works/${work._id}`)}
-                className={`group relative flex aspect-square h-80 md:h-96 cursor-pointer`}
+                className={`group relative flex aspect-square h-80 cursor-pointer md:h-96`}
               >
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_URL_PREFIX}${
-                    work.displayImages || work.images[0]
-                  }`}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_URL_PREFIX}${work.images[0]}`}
                   alt={work.title}
                   width={6000}
                   height={6000}
@@ -58,7 +56,7 @@ const Others = ({ id }) => {
                   priority
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-200 group-hover:opacity-100">
-                  <h2 className="flex items-center gap-x-1 text-lg md:text-3xl font-semibold text-white md:gap-x-2 lg:gap-x-1 ">
+                  <h2 className="flex items-center gap-x-1 text-lg font-semibold text-white md:gap-x-2 md:text-3xl lg:gap-x-1 ">
                     <MdArchitecture />
                     {work.name}
                     <FiArrowUpRight />
