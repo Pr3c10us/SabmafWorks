@@ -58,7 +58,7 @@ const AddProduct = () => {
         })
         .then((res) => {
           toast.success("Product Added Successfully");
-          navigate("/products");
+          navigate("/");
         })
         .catch((err) => {
           toast.error(err.response.data.msg || "Something went wrong");
@@ -164,7 +164,7 @@ const AddProduct = () => {
           <button
             type="button"
             disabled={formik.isSubmitting}
-            onClick={() => navigate("/products")}
+            onClick={() => navigate("/")}
             className={`rounded bg-red-500 px-8 py-1.5 text-white ${
               formik.isSubmitting && "cursor-not-allowed opacity-50"
             }`}

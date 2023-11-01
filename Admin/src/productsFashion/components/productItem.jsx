@@ -12,7 +12,7 @@ const ProductItem = ({ image, id, name }) => {
       />
       <Link
         className="flex items-center justify-center gap-2 rounded border border-asisDark py-2 text-sm font-medium capitalize"
-        to={`/products/${id}`}
+        to={`/${id}`}
       >
         <img src={PenIcon} alt="edit" className="h-6" />
         Edit {name.substring(0, 12).concat(`. . .`)}

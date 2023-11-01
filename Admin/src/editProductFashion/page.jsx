@@ -31,7 +31,7 @@ const EditProduct = () => {
       setLoading(true);
       const res = await axios.get(
         `${import.meta.env.VITE_BACKEND_URL}projects/${
-          location.pathname.split("/")[2]
+          location.pathname.split("/")[1]
         }`,
       );
       setProductDetails((prev) => ({ ...prev, ...res.data }));
@@ -64,7 +64,7 @@ const EditProduct = () => {
       axios
         .put(
           `${import.meta.env.VITE_BACKEND_URL}projects/${
-            location.pathname.split("/")[2]
+            location.pathname.split("/")[1]
           }`,
           data,
           {
@@ -106,7 +106,7 @@ const EditProduct = () => {
       const token = localStorage.getItem("token");
       await axios.delete(
         `${import.meta.env.VITE_BACKEND_URL}projects/${
-          location.pathname.split("/")[2]
+          location.pathname.split("/")[1]
         }/image`,
         {
           data: { imageNames },
@@ -131,7 +131,7 @@ const EditProduct = () => {
 
       await axios.delete(
         `${import.meta.env.VITE_BACKEND_URL}projects/${
-          location.pathname.split("/")[2]
+          location.pathname.split("/")[1]
         }`,
         {
           headers: {
@@ -140,7 +140,7 @@ const EditProduct = () => {
         },
       );
       toast.success("Product Deleted Successfully");
-      navigate("/products");
+      navigate("/");
     } catch (error) {
       console.log(error);
       toast.error(error.response.data.msg || "Something went wrong");
@@ -259,7 +259,7 @@ const EditProduct = () => {
               fileList={fileList}
               setImages={setImages}
               images={images}
-              id={location.pathname.split("/")[2]}
+              id={location.pathname.split("/")[1]}
             />
           </section>
         </section>

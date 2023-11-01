@@ -25,7 +25,7 @@ const Page = () => {
           // save to local storage
           localStorage.setItem("token", token);
           toast.success("Signed in successfully");
-          navigate("/products");
+          navigate("/");
         })
         .catch((error) => {
           if (error.response) {
